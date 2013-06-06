@@ -2,7 +2,6 @@ package com.fullsail.java1week1;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -34,12 +33,12 @@ public class MainActivity extends Activity {
 		
 		// Add the edit text view
 		editText = new EditText(this);
-		editText.setHint("100");
+		editText.setHint(R.string.HintText);
 		linearLayout.addView(editText);
 		
 		// Add the button
 		Button button = new Button(this);
-		button.setText("Calculate");
+		button.setText(R.string.ButtonText);
 		linearLayout.addView(button);
 		
 		// Add the output text view
@@ -68,6 +67,8 @@ public class MainActivity extends Activity {
 	}
 	
 	public String sumOfSquares(String input) {
+		// This is my solution to project Euler problem 6.
+		// http://projecteuler.net/
 		/*
 		* The sum of the squares of the first ten natural numbers is,
 		*
