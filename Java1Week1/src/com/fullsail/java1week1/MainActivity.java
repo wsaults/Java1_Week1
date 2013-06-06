@@ -56,17 +56,21 @@ public class MainActivity extends Activity {
 			}
 		});
 		
-		
+		// Add the time text view
+		TextView timeTextView = new TextView(this);
 		
 		// Add the a text view
 		TextView conditionalTextView = new TextView(this);
 		long timestamp = System.currentTimeMillis() / 1000L;
 		if (timestamp % 2 == 0) {
-			conditionalTextView.setText("The time is divisible by 2 \n the time is" + timestamp);
+			conditionalTextView.setText("The time is divisible by 2. ");
+			timeTextView.setText("The time is" + timestamp);
 		} else if (timestamp % 5 == 0) {
-			conditionalTextView.setText("The time is divisible by 5 \n the time is" + timestamp);
+			conditionalTextView.setText("The time is divisible by 5. ");
+			timeTextView.setText("The time is" + timestamp);
 		} else {
-			conditionalTextView.setText("The time is not divisible by 2 or 5 \n the time is" + timestamp);
+			conditionalTextView.setText("The time is not divisible by 2 or 5. ");
+			timeTextView.setText("The time is" + timestamp);
 		}
 		
 		// Add the nested layout
@@ -74,6 +78,7 @@ public class MainActivity extends Activity {
 		nestedLayout.setOrientation(LinearLayout.HORIZONTAL);
 		nestedLayout.setLayoutParams(layoutParams);
 		nestedLayout.addView(conditionalTextView);
+		nestedLayout.addView(timeTextView);
 		
 		linearLayout.addView(nestedLayout);
 		setContentView(linearLayout);
