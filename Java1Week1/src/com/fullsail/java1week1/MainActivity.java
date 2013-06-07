@@ -1,3 +1,12 @@
+/*
+ * project 	Java1Week1
+ * 
+ * package 	com.fullsail.java1week1
+ * 
+ * @author 	William Saults
+ * 
+ * date 	Jun 3, 2013
+ */
 package com.fullsail.java1week1;
 
 import android.os.Bundle;
